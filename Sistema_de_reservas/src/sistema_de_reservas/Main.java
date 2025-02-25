@@ -4,6 +4,8 @@
  */
 package sistema_de_reservas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author SENA
@@ -14,7 +16,27 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        Scanner TomarDatos= new Scanner(System.in);
+        System.out.println("Ingrese su Nombre: ");
+        String Nombre =TomarDatos.nextLine();
+        
+        System.out.println("Ingrese su Apellido: ");
+        String Apellido=TomarDatos.nextLine();
+        
+        System.out.println("Ingrese su Cedula: ");
+        int Cedula=TomarDatos.nextInt();
+        
+        Persona objPersona= new Persona(Nombre,Apellido,Cedula);
+        Usuario objUsuario= new Usuario(Nombre,Apellido,Cedula,20109212);
+        
+        objPersona.ImprimirDatos();
+        
+        
+       
+    
+        
     }
     
 }
